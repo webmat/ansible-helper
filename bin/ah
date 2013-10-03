@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+# add lib/ to the path
+$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
+
+require "ansible-helper/cli"
+AnsibleHelper::CLI.start(ARGV)
