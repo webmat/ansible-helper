@@ -10,7 +10,6 @@ class AnsibleHelper::CLI < Thor
           :desc => "Create a .gitkeep file in each subdirectory?",
           :type => :boolean, :default => false, :banner => 'BOOLEAN'
   def role(name)
-    puts "role #{name} with #{options}"
     dir_glob = "roles/#{name}/{#{options[:dirs]}}"
     `mkdir -p #{dir_glob}`
     `touch #{dir_glob}/.gitkeep` if options[:gitkeep]
