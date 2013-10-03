@@ -1,3 +1,8 @@
+# Ignore the directories I create when testing stuff
+roles/
+
+# Standard Ruby ignores
+
 *.gem
 *.rbc
 .bundle
